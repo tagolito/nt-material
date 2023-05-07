@@ -1,0 +1,27 @@
+{
+  "name": "ng-nt-button",
+  "version": "0.0.2",
+  "peerDependencies": {
+    "@angular/common": "^16.0.0",
+    "@angular/core": "^16.0.0"
+  },
+  "dependencies": {
+    "tslib": "^2.3.0"
+  },
+  "sideEffects": false,
+  "description": "This library was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.0.0.",
+  "main": "index.d.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tagolito/nt-material.git"
+  },
+  "author": "nt",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tagolito/nt-material/issues"
+  },
+  "homepage": "https://github.com/tagolito/nt-material#readme"
+}
