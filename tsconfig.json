@@ -18,9 +18,6 @@
     "paths": {
       "ng-nt-button": [
         "dist/ng-nt-button"
-      ],
-      "nt-ng-button": [
-        "dist/nt-ng-button"
       ]
     },
     "importHelpers": true,

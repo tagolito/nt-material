@@ -4,8 +4,8 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
-import { NgNtButtonModule } from 'ng-nt-button';
-import { NgNtButtonComponent } from 'ng-nt-button';
+//import { NgNtButtonModule } from 'ng-nt-button';
+import { NgNtButtonModule} from 'projects/ng-nt-button/src/public-api'; 
 
 @NgModule({
   declarations: [
@@ -17,6 +17,6 @@ import { NgNtButtonComponent } from 'ng-nt-button';
     NgNtButtonModule,
   ],
   providers: [],
-  bootstrap: [AppComponent,NgNtButtonComponent]
+  bootstrap: [AppComponent]
 })
 export class AppModule { }

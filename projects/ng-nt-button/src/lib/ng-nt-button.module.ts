@@ -1,8 +1,6 @@
 import { NgModule } from '@angular/core';
 import { NgNtButtonComponent } from './ng-nt-button.component';
 
-
-
 @NgModule({
   declarations: [
     NgNtButtonComponent
