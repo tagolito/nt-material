@@ -1,0 +1,62 @@
+@use "sass:color";
+@import "variables.scss";
+
+
+:host{
+    background-color:$basic-color;
+    padding: 16px;
+    box-shadow: 0px 2px 3px 2px color.scale($basic-color, $lightness: -10%);
+    border: none;
+    border-radius: 24px;
+    position: relative;
+    display: block;
+    overflow: hidden;
+    z-index:0;
+    cursor: pointer;
+    
+}
+:host > span {
+      position: absolute;
+      top:0;
+      left:0;
+      display: block;
+      width: 0;
+      height: 0;
+      border-radius: 50%;
+      background-color: rgb(200 200 200 / 15%);
+      z-index: -1;
+}
+:host:active span {
+      width: 300%;
+      height: 700%;
+      -webkit-transition: width 0.3s ease-in-out, height 0.3s ease-in-out;
+      transition: width 0.3s ease-in-out, height 0.3s ease-in-out;
+      transform: translate(-50%, -50%);
+}
+
+:host:disabled {
+    cursor: default;
+    background-color: color.scale($basic-color, $lightness: -3%);
+    > span {
+        width: 0;
+        height: 0;
+    }
+}
+
+:host[color="primary"] {
+    background: $primary-color;
+    @include text-contrast($primary-color);
+
+}
+
+:host[color="secondary"] {
+    background: $secondary-color;
+    @include text-contrast($secondary-color);
+
+}
+
+:host[color="basic"] {
+    background: $basic-color;
+    @include text-contrast($basic-color);
+
+}

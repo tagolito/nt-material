@@ -1,0 +1,29 @@
+@use "sass:color";
+@use "sass:math";
+
+$basic-color: #fff;
+$primary-color: rgb(34, 34, 34);
+$secondary-color: rgb(21, 179, 57);
+
+/*------------------------
+mixin that calculates if text needs to be light or dark
+depending on the background color passed.
+
+From this W3C document: http://www.webmasterworld.com/r.cgi?f=88&d=9769&url=http://www.w3.org/TR/AERT#color-contrast
+			
+Color brightness is determined by the following formula: 
+((Red value X 299) + (Green value X 587) + (Blue value X 114)) / 1000
+------------------------*/
+
+@mixin text-contrast($n) {
+    $color-brightness: round(math.div((red($n) * 299) + (green($n) * 587) + (blue($n) * 114), 1000));
+    $light-color: round(math.div((red(#ffffff) * 299) + (green(#ffffff) * 587) + (blue(#ffffff) * 114), 1000));
+    
+    @if abs($color-brightness) < (math.div($light-color,2)){
+      color: white;
+    }
+  
+    @else {
+      color: black;
+    }
+  }

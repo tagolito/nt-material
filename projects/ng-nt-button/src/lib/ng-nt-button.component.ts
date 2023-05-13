@@ -1,51 +1,27 @@
-import { Component, ViewChild, ElementRef} from '@angular/core';
+import { Component, ElementRef, Input} from '@angular/core';
+import { NgButtonBase } from './ngButtonBase';
+
 
 @Component({
-  selector: 'button[ng-nt-button]',
+  selector: 'button[ng-nt-button], button[meow]',
   host: {'(mousemove)':'onMouseMove($event)'},
-  template: `<ng-content></ng-content><span #positionAwareness></span>`,
-  styles: [
-    `:host{
-      padding: 16px;
-      box-shadow: 3px 3px 8px 3px #ddd;
-      border: none;
-      border-radius: 24px;
-      position: relative;
-      display: block;
-      overflow: hidden;
-      z-index:0;
-      cursor: pointer;
-      background-color: #fff;
-    }
-    :host > span {
-        position: absolute;
-        display: block;
-        width: 0;
-        height: 0;
-        border-radius: 50%;
-        background-color: rgb(200 200 200 / 15%);
-        z-index: -1;
-    }
-    :host:active span {
-        width: 300%;
-        height: 300%;
-        -webkit-transition: width 0.1s ease-in-out, height 0.1s ease-in-out;
-        transition: width 0.2s ease-in-out, height 0.2s ease-in-out;
-        -webkit-transform: translate(-50%, -50%);
-    }
-    `
-  ]
+  template: `<ng-content></ng-content><span></span>`,
+  styleUrls: ['button.scss'],
+  inputs: ['disabled', 'color']
 })
 
-export class NgNtButtonComponent {
-  @ViewChild('positionAwareness')
-  buttonBackground!: ElementRef;
-  
-  constructor(){}
+export class NgNtButtonComponent extends NgButtonBase{
+  @Input('color') colorClass: string = "default";
+  isDisabled: boolean = false;
+  buttonBackgroundClass: string = "enabled";
+
+  constructor(public elementRef: ElementRef){
+    super(elementRef);
+  }
 
   onMouseMove(e:MouseEvent){  
-    this.buttonBackground.nativeElement.style.top=e.y+'px';
-    this.buttonBackground.nativeElement.style.left=e.x+'px';
+    this.elementRef.nativeElement.querySelector('span').style.top=e.y - this.elementRef.nativeElement.offsetTop+'px';
+    this.elementRef.nativeElement.querySelector('span').style.left=e.x - this.elementRef.nativeElement.offsetLeft+'px';
   }
 
 }
