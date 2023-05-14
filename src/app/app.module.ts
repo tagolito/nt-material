@@ -7,7 +7,7 @@ import { AppComponent } from './app.component';
 
 //import { NgNtButtonModule } from 'dist/ng-nt-button';
 //import { NgNtButtonModule} from 'projects/ng-nt-button/src/public-api'; 
-import { NgNtButtonModule} from 'ng-nt-button'; 
+import { NgNtButtonModule} from 'dist/tagolito/symbols'; 
 
 //import { NgNtIconModule } from 'dist/ng-nt-icon'; 
 

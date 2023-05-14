@@ -100,23 +100,23 @@
         }
       }
     },
-    "@tagle/symbols": {
+    "@tagolito/symbols": {
       "projectType": "library",
-      "root": "projects/tagle/symbols",
-      "sourceRoot": "projects/tagle/symbols/src",
+      "root": "projects/tagolito/symbols",
+      "sourceRoot": "projects/tagolito/symbols/src",
       "prefix": "ng-nt",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:ng-packagr",
           "options": {
-            "project": "projects/tagle/symbols/ng-package.json"
+            "project": "projects/tagolito/symbols/ng-package.json"
           },
           "configurations": {
             "production": {
-              "tsConfig": "projects/tagle/symbols/tsconfig.lib.prod.json"
+              "tsConfig": "projects/tagolito/symbols/tsconfig.lib.prod.json"
             },
             "development": {
-              "tsConfig": "projects/tagle/symbols/tsconfig.lib.json"
+              "tsConfig": "projects/tagolito/symbols/tsconfig.lib.json"
             }
           },
           "defaultConfiguration": "production"
@@ -124,7 +124,7 @@
         "test": {
           "builder": "@angular-devkit/build-angular:karma",
           "options": {
-            "tsConfig": "projects/tagle/symbols/tsconfig.spec.json",
+            "tsConfig": "projects/tagolito/symbols/tsconfig.spec.json",
             "polyfills": [
               "zone.js",
               "zone.js/testing"
