@@ -9,6 +9,8 @@ import { AppComponent } from './app.component';
 //import { NgNtButtonModule} from 'projects/ng-nt-button/src/public-api'; 
 import { NgNtButtonModule} from 'ng-nt-button'; 
 
+//import { NgNtIconModule } from 'dist/ng-nt-icon'; 
+
 
 @NgModule({
   declarations: [
@@ -19,6 +21,7 @@ import { NgNtButtonModule} from 'ng-nt-button';
     BrowserModule,
     AppRoutingModule,
     NgNtButtonModule,
+    //NgNtIconModule
   ],
   exports: [CommonModule],
   providers: [],

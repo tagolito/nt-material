@@ -100,23 +100,23 @@
         }
       }
     },
-    "ng-nt-button": {
+    "@tagle/symbols": {
       "projectType": "library",
-      "root": "projects/ng-nt-button",
-      "sourceRoot": "projects/ng-nt-button/src",
-      "prefix": "lib",
+      "root": "projects/tagle/symbols",
+      "sourceRoot": "projects/tagle/symbols/src",
+      "prefix": "ng-nt",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:ng-packagr",
           "options": {
-            "project": "projects/ng-nt-button/ng-package.json"
+            "project": "projects/tagle/symbols/ng-package.json"
           },
           "configurations": {
             "production": {
-              "tsConfig": "projects/ng-nt-button/tsconfig.lib.prod.json"
+              "tsConfig": "projects/tagle/symbols/tsconfig.lib.prod.json"
             },
             "development": {
-              "tsConfig": "projects/ng-nt-button/tsconfig.lib.json"
+              "tsConfig": "projects/tagle/symbols/tsconfig.lib.json"
             }
           },
           "defaultConfiguration": "production"
@@ -124,7 +124,106 @@
         "test": {
           "builder": "@angular-devkit/build-angular:karma",
           "options": {
-            "tsConfig": "projects/ng-nt-button/tsconfig.spec.json",
+            "tsConfig": "projects/tagle/symbols/tsconfig.spec.json",
+            "polyfills": [
+              "zone.js",
+              "zone.js/testing"
+            ]
+          }
+        }
+      }
+    },
+    "ng-nt-icon": {
+      "projectType": "library",
+      "root": "projects/ng-nt-icon",
+      "sourceRoot": "projects/ng-nt-icon/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "project": "projects/ng-nt-icon/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/ng-nt-icon/tsconfig.lib.prod.json"
+            },
+            "development": {
+              "tsConfig": "projects/ng-nt-icon/tsconfig.lib.json"
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "tsConfig": "projects/ng-nt-icon/tsconfig.spec.json",
+            "polyfills": [
+              "zone.js",
+              "zone.js/testing"
+            ]
+          }
+        }
+      }
+    },
+    "sample": {
+      "projectType": "library",
+      "root": "projects/sample",
+      "sourceRoot": "projects/sample/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "project": "projects/sample/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/sample/tsconfig.lib.prod.json"
+            },
+            "development": {
+              "tsConfig": "projects/sample/tsconfig.lib.json"
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "tsConfig": "projects/sample/tsconfig.spec.json",
+            "polyfills": [
+              "zone.js",
+              "zone.js/testing"
+            ]
+          }
+        }
+      }
+    },
+    "@test/library": {
+      "projectType": "library",
+      "root": "projects/test/library",
+      "sourceRoot": "projects/test/library/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "project": "projects/test/library/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/test/library/tsconfig.lib.prod.json"
+            },
+            "development": {
+              "tsConfig": "projects/test/library/tsconfig.lib.json"
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "tsConfig": "projects/test/library/tsconfig.spec.json",
             "polyfills": [
               "zone.js",
               "zone.js/testing"

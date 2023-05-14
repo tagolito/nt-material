@@ -16,8 +16,17 @@
     "experimentalDecorators": true,
     "moduleResolution": "node",
     "paths": {
-      "ng-nt-button": [
-        "dist/ng-nt-button"
+      "@test/library": [
+        "dist/test/library"
+      ],
+      "@tagle/symbols": [
+        "dist/tagle/symbols"
+      ],
+      "ng-nt-icon": [
+        "dist/ng-nt-icon"
+      ],
+      "sample": [
+        "dist/sample"
       ]
     },
     "importHelpers": true,
