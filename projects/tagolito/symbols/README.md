@@ -1,6 +1,7 @@
-# NgNtButton
+# Usage
 
-This library was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.0.0.
+
+Moving to [Angular CLI](https://github.com/angular/angular-cli) version 16.0.0.
 
 ## Code scaffolding
 

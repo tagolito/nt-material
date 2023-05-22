@@ -1,4 +1,19 @@
 * {
-    margin: 20px;
+    margin: 8px;
+    font-size:16px;
 }
-$primary-color: yellow !important;
+section {
+    display: table;
+}
+section h2 {
+    display: table-cell;
+    width:100px;
+    text-align: left;
+}
+section .elements {
+    display: table-cell; 
+}
+section .elements > .col{
+   display:inline-block;
+   width:10em;
+}

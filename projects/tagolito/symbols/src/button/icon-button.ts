@@ -2,14 +2,14 @@ import { Component, ElementRef, Input} from '@angular/core';
 import { NgNtButtonBase } from './ng-nt-button-base';
 
 @Component({
-  selector: 'button[nt-button]',
+  selector: 'button[nt-icon-button]',
   host: {'(mousemove)':'onMouseMove($event)'},
   template: `<ng-content></ng-content><span class="pa"></span>`,
-  styleUrls: ['../assets/button.scss'],
+  styleUrls: ['../assets/icon-button.scss'],
   inputs: ['disabled', 'color']
 })
 
-export class NgNtButtonComponent extends NgNtButtonBase{
+export class NgNtIconButtonComponent extends NgNtButtonBase{
   constructor(public elementRef: ElementRef){
     super(elementRef);
   }

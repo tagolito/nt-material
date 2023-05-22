@@ -7,9 +7,7 @@ import { AppComponent } from './app.component';
 
 //import { NgNtButtonModule } from 'dist/ng-nt-button';
 //import { NgNtButtonModule} from 'projects/ng-nt-button/src/public-api'; 
-import { NgNtButtonModule} from 'dist/tagolito/symbols'; 
-//test
-//import { NgNtIconModule } from 'dist/ng-nt-icon'; 
+import { NgNtButtonModule, NgNtIconModule} from 'projects/tagolito/symbols/src/public-api'; 
 
 
 @NgModule({
@@ -21,7 +19,7 @@ import { NgNtButtonModule} from 'dist/tagolito/symbols';
     BrowserModule,
     AppRoutingModule,
     NgNtButtonModule,
-    //NgNtIconModule
+    NgNtIconModule
   ],
   exports: [CommonModule],
   providers: [],

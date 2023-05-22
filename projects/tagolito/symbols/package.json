@@ -1,6 +1,6 @@
 {
   "name": "@tagolito/symbols",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "peerDependencies": {
     "@angular/common": "^16.0.0",
     "@angular/core": "^16.0.0",
@@ -20,7 +20,7 @@
     "url": "git+https://github.com/tagolito/symbols.git"
   },
   "author": "nt",
-  "license": "ISC",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/tagolito/symbols/issues"
   },

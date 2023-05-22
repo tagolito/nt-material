@@ -1,0 +1,12 @@
+:host{
+    margin: 0;
+    display: flex;
+}
+:host > .icon {
+    font-family: 'Material Symbols Outlined';
+    font-size: inherit;
+    line-height: 1;
+}
+:host > .shown-text {
+    padding-left:4px;
+}
